@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Admin KivuFoot</title>
+<style>body{background:#07130d;color:#eaf5ee;font:16px system-ui;margin:0;padding:16px;max-width:760px;margin:auto}input,select,textarea,button{width:100%;min-height:46px;margin:6px 0;border-radius:10px;border:1px solid #1e4430;background:#0a1b11;color:#eaf5ee;font:inherit;padding:8px;box-sizing:border-box}button{background:#c6f432;color:#06210f;font-weight:800;border:0}pre{background:#0f2418;padding:10px;border-radius:10px;overflow:auto;max-height:50vh;font-size:.8rem}</style></head><body>
+<h1>Administration</h1>
+<input id="s" type="password" placeholder="Clé administrateur (ADMIN_SECRET)" autocomplete="off">
+<select id="a"><option value="stats">Statistiques</option><option value="ranking">Classement complet (avec numéros)</option><option value="export">Exporter les données</option><option value="config">Modifier la configuration</option><option value="result">Saisir / valider un résultat</option><option value="purge_tests">Supprimer les données de test</option></select>
+<textarea id="p" rows="4" placeholder='Paramètres JSON, ex. {"set":{"state":"open"}} ou {"key":"sf1","value":"1","validated":true}'></textarea>
+<button id="go">Envoyer</button><pre id="o"></pre>
+<script>
+document.getElementById('go').onclick=function(){var p={};try{p=JSON.parse(document.getElementById('p').value||'{}')}catch(e){document.getElementById('o').textContent='JSON invalide';return}
+p.action=document.getElementById('a').value;
+fetch('/api/app?r=admin',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+document.getElementById('s').value},body:JSON.stringify(p)}).then(function(r){return r.json()}).then(function(j){document.getElementById('o').textContent=JSON.stringify(j,null,2)})};
+</script></body></html>

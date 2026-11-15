@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concours de pronostics KivuFoot</title>
+<style>
+:root{--bg:#07130d;--card:#0f2418;--line:#1e4430;--g:#1f7a4a;--lime:#c6f432;--tx:#eaf5ee;--mu:#9fb8a8}
+*{box-sizing:border-box}html,body{margin:0;max-width:100%;overflow-x:hidden}
+body{background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{padding:28px 18px 22px;text-align:center;background:linear-gradient(160deg,#0d3a22,var(--bg))}
+h1{font-size:clamp(1.6rem,6vw,2.4rem);margin:8px 0}h2{font-size:1.3rem;color:var(--lime);margin:0 0 12px}
+main{max-width:760px;margin:0 auto;padding:0 16px 40px}
+section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0}
+.badge{display:inline-block;padding:6px 14px;border-radius:99px;background:#3a3a0d;color:var(--lime);border:1px solid var(--lime);font-weight:700;font-size:.85rem}
+.mu{color:var(--mu)}.warn{border-left:4px solid var(--lime);padding:8px 12px;background:#14301f;border-radius:8px;font-size:.92rem}
+.match{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 0;border-top:1px solid var(--line)}
+.match:first-of-type{border-top:0}.t{flex:1;text-align:center;font-weight:700;font-size:.9rem}
+.t img{display:block;margin:0 auto 6px;width:52px;height:52px;object-fit:contain}
+.h{font-weight:800;color:var(--lime);white-space:nowrap}
+ul{padding-left:20px;margin:6px 0}table{width:100%;border-collapse:collapse}td{padding:9px 4px;border-top:1px solid var(--line)}td:last-child{text-align:right;font-weight:800;color:var(--lime)}
+.prize{display:flex;justify-content:space-between;padding:12px 4px;border-top:1px solid var(--line);font-weight:700}
+label{display:block;margin:12px 0 4px;font-weight:600}
+input,select,button{width:100%;min-height:48px;border-radius:12px;border:1px solid var(--line);background:#0a1b11;color:var(--tx);font:inherit;padding:10px 12px}
+.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400}.chk input{width:24px;min-height:24px;margin-top:3px}
+button{background:var(--lime);color:#06210f;font-weight:800;border:0;margin-top:16px;cursor:pointer}
+button:disabled{opacity:.45;cursor:not-allowed}
+a{color:var(--lime)}footer{text-align:center;padding:20px;color:var(--mu);font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+  <span class="badge" id="etat">Chargement…</span>
+  <h1>Concours de pronostics KivuFoot</h1>
+  <p class="mu">Tournoi Interdépartemental · 2e édition 2026<br>Université Espoir d’Afrique · Bujumbura</p>
+</header>
+<main>
+
+<section>
+  <h2>Le concours</h2>
+  <p>Pronostiquez les demi-finales puis la finale et tentez de gagner un forfait Lumitel. <b>Participation 100 % gratuite</b> : aucun paiement, achat ni transfert d’argent n’est demandé. Les lots sont financés par KivuFoot.</p>
+  <p class="warn">Conditions d’âge, formalités et contact officiel : à confirmer par les organisateurs.</p>
+</section>
+
+<section id="programme">
+  <h2>Demi-finales · dimanche 15 novembre 2026</h2>
+  <div class="match">
+    <div class="t"><img alt="" src="https://kivufoot-web.onrender.com/logos-equipes/sif-transparent.png" onerror="this.style.visibility='hidden'">SIF</div>
+    <div class="h">13 h 00</div>
+    <div class="t"><img alt="" src="https://kivufoot-web.onrender.com/logos-equipes/sante-publique-transparent.png" onerror="this.style.visibility='hidden'">SANTÉ PUBLIC</div>
+  </div>
+  <div class="match">
+    <div class="t"><img alt="" src="https://kivufoot-web.onrender.com/logos-equipes/ggt-grf-transparent.png" onerror="this.style.visibility='hidden'">G.G.T-GRF</div>
+    <div class="h">15 h 00</div>
+    <div class="t"><img alt="" src="https://kivufoot-web.onrender.com/logos-equipes/info-24-25-transparent.png" onerror="this.style.visibility='hidden'">INFO-2024+2025</div>
+  </div>
+  <p class="mu">Heure du Burundi. Clôture des pronostics des demi-finales : 15 novembre 2026 à 12 h 50. Finalistes, date et heure de la finale : annoncés après les demi-finales.</p>
+</section>
+
+<section>
+  <h2>Comment participer</h2>
+  <ul>
+    <li><b>Étape 1</b> : avant les demi-finales, choisissez pour chaque match : victoire équipe 1, match nul ou victoire équipe 2 (temps réglementaire ; égalité puis tirs au but = match nul).</li>
+    <li><b>Étape 2</b> : avant la finale, donnez le score exact (sans tirs au but) et l’équipe championne.</li>
+    <li>Les deux étapes sont obligatoires. Un seul envoi par étape, non modifiable.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Barème (13 points max)</h2>
+  <table>
+    <tr><td>Bon résultat demi-finale 1</td><td>2 pts</td></tr>
+    <tr><td>Bon résultat demi-finale 2</td><td>2 pts</td></tr>
+    <tr><td>Score exact de la finale</td><td>6 pts</td></tr>
+    <tr><td>Champion correctement identifié</td><td>3 pts</td></tr>
+  </table>
+  <p class="mu">Minimum 1 point pour être classé. Égalité : 1) points, 2) score exact, 3) champion, 4) pronostic de finale reçu le plus tôt, 5) plus petit numéro d’inscription.</p>
+</section>
+
+<section>
+  <h2>Récompenses Lumitel</h2>
+  <div class="prize"><span>1er</span><span>Forfait 6,5 Go</span></div>
+  <div class="prize"><span>2e</span><span>Forfait 5 Go</span></div>
+  <div class="prize"><span>3e</span><span>Forfait 3 Go</span></div>
+  <p class="mu">Trois gagnants maximum : les trois premiers éligibles du classement général. Trouver le champion ou le score exact donne des points, pas un lot automatique. Si moins de trois personnes sont éligibles, seuls les rangs occupés reçoivent un lot.</p>
+</section>
+
+<section id="inscription">
+  <h2>Étape 1 · Inscription et pronostics</h2>
+  <p id="msg1" class="warn">Chargement…</p>
+  <form id="f1" onsubmit="return false" hidden>
+    <label for="nom">Nom ou pseudo de participation</label>
+    <input id="nom" maxlength="40" autocomplete="off">
+    <label for="tel">Numéro Lumitel (privé, jamais publié)</label>
+    <input id="tel" inputmode="tel" autocomplete="off" placeholder="Ex. : 79 00 00 00">
+    <label for="sf1">Demi-finale 1 : SIF – SANTÉ PUBLIC</label>
+    <select id="sf1"><option value="">Choisir…</option><option value="1">Victoire SIF</option><option value="N">Match nul</option><option value="2">Victoire SANTÉ PUBLIC</option></select>
+    <label for="sf2">Demi-finale 2 : G.G.T-GRF – INFO-2024+2025</label>
+    <select id="sf2"><option value="">Choisir…</option><option value="1">Victoire G.G.T-GRF</option><option value="N">Match nul</option><option value="2">Victoire INFO-2024+2025</option></select>
+    <label class="chk"><input type="checkbox" id="c1"> J’accepte le règlement (obligatoire)</label>
+    <label class="chk"><input type="checkbox" id="c2"> J’accepte (facultatif) que mon nom soit publié si je gagne</label>
+    <button id="b1">Envoyer mes pronostics</button>
+  </form>
+  <p id="ok1" role="status"></p>
+  <p class="mu">Ne communiquez jamais de mot de passe Lumitel, de code secret Mobile Money ni d’information bancaire.</p>
+</section>
+
+<section id="finale">
+  <h2>Étape 2 · Pronostic de la finale</h2>
+  <p id="msg2" class="warn">Chargement…</p>
+  <form id="f2" onsubmit="return false" hidden>
+    <label for="tel2">Numéro utilisé à l’inscription</label>
+    <input id="tel2" inputmode="tel" autocomplete="off">
+    <label for="code">Code personnel</label>
+    <input id="code" autocomplete="off" maxlength="12" style="text-transform:uppercase">
+    <label>Score exact au temps réglementaire (sans tirs au but)</label>
+    <div style="display:flex;gap:8px"><input id="home" type="number" min="0" max="30" placeholder="Équipe A"><input id="away" type="number" min="0" max="30" placeholder="Équipe B"></div>
+    <label for="champ">Équipe championne</label>
+    <select id="champ"></select>
+    <button id="b2">Envoyer mon pronostic de finale</button>
+  </form>
+  <p id="ok2" role="status"></p>
+  <p class="mu">Code perdu : contactez les organisateurs (contact officiel à confirmer).</p>
+</section>
+
+<section id="classement">
+  <h2>Classement</h2>
+  <div id="rk" class="mu">Le classement sera publié après validation des résultats officiels : d’abord provisoire (réclamations 24 h), puis final. Les numéros ne sont jamais affichés.</div>
+</section>
+
+
+<section>
+  <h2>Règlement</h2>
+  <p>Gratuité, deux étapes, clôtures, barème, trois lots maximum, départage, confidentialité, réclamations (24 h après le classement provisoire).</p>
+  <ul>
+    <li>Demi-finale annulée ou non jouée : 0 point pour tous sur cette question.</li>
+    <li>Finale annulée ou non jouée : concours annulé, sans classement gagnant.</li>
+    <li>Autres cas : traitement transparent selon le règlement publié et les décisions officielles.</li>
+  </ul>
+  <p class="warn">Projet de règlement, non validé juridiquement. À confirmer : âge, formalités, contact officiel.</p>
+</section>
+
+</main>
+<footer>Concours indépendant organisé par KivuFoot</footer>
+<script>
+var ST={preparation:'Concours en préparation',open:'Inscriptions ouvertes',s1_closed:'Première étape clôturée',waiting_finalists:'Attente des finalistes',final_open:'Pronostics de finale ouverts',final_closed:'Pronostics de finale clôturés'};
+function $(i){return document.getElementById(i)}
+function post(u,b){return fetch(u,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)}).then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.error||'Erreur');return j})})}
+function fmt(d){return d?new Date(d).toLocaleString('fr-FR',{timeZone:'Africa/Bujumbura',dateStyle:'short',timeStyle:'short'})+' (Burundi)':'à annoncer'}
+fetch('/api/app?r=config').then(function(r){return r.json()}).then(function(c){
+  var label=ST[c.state]||'';if(c.ranking==='provisional')label='Classement provisoire';if(c.ranking==='final')label='Classement final';if(c.cancelled)label='Concours annulé';
+  $('etat').textContent=label+(c.test_mode?' · TEST':'');
+  var o=c.state==='open';$('f1').hidden=!o;
+  $('msg1').textContent=o?'Clôture : '+fmt(c.s1_close)+'. Un seul envoi, non modifiable.':'Les inscriptions ne sont pas ouvertes.';
+  var fo=c.state==='final_open';$('f2').hidden=!fo;
+  $('msg2').textContent=fo?'Finale : '+(c.finalist_a||'?')+' – '+(c.finalist_b||'?')+'. Clôture : '+fmt(c.final_close)+'.':'Cette étape ouvrira après les demi-finales, quand les finalistes seront connus.';
+  $('champ').innerHTML='<option value="">Choisir…</option><option value="A">'+(c.finalist_a||'Équipe A')+'</option><option value="B">'+(c.finalist_b||'Équipe B')+'</option>';
+  $('home').placeholder=c.finalist_a||'Équipe A';$('away').placeholder=c.finalist_b||'Équipe B';
+}).catch(function(){$('msg1').textContent='Service indisponible, réessayez.'});
+$('b1').onclick=function(){
+  if(!$('c1').checked){$('ok1').textContent='Acceptez le règlement pour continuer.';return}
+  $('b1').disabled=true;
+  post('/api/app?r=register',{name:$('nom').value,phone:$('tel').value,sf1:$('sf1').value,sf2:$('sf2').value,accept:true,publish:$('c2').checked}).then(function(j){
+    $('f1').hidden=true;$('ok1').innerHTML='<b>Inscription n°'+j.id+' enregistrée.</b><br>Votre code personnel : <b style="font-size:1.6rem;color:#c6f432">'+j.code+'</b><br>Notez-le ou faites une capture : il ne sera plus affiché et il est nécessaire pour l’étape 2.';
+  }).catch(function(e){$('ok1').textContent=e.message;$('b1').disabled=false});
+};
+$('b2').onclick=function(){
+  $('b2').disabled=true;
+  post('/api/app?r=final',{phone:$('tel2').value,code:$('code').value,home:$('home').value,away:$('away').value,champion:$('champ').value}).then(function(){
+    $('f2').hidden=true;$('ok2').textContent='Pronostic de finale enregistré. Bonne chance !';
+  }).catch(function(e){$('ok2').textContent=e.message;$('b2').disabled=false});
+};
+fetch('/api/app?r=ranking').then(function(r){return r.json()}).then(function(j){
+  if(!j.rows||!j.rows.length)return;
+  var t='<p>'+(j.status==='final'?'Classement final':'Classement provisoire (réclamations possibles pendant 24 h)')+'</p><table>';
+  j.rows.slice(0,50).forEach(function(r){t+='<tr><td>'+r.rank+'. '+r.label.replace(/</g,'&lt;')+(r.prize?' · '+r.prize:'')+'</td><td>'+r.pts+' pts</td></tr>'});
+  $('rk').innerHTML=t+'</table>';
+}).catch(function(){});
+</script>
+</body>
+</html>
